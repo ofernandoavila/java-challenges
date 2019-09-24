@@ -3,7 +3,7 @@ public class Poupanca {
 
 	/**
 	 * 
-	 * Calcula o rendimento após X anos
+	 * Calcula o rendimento apÃ³s X anos
 	 * 
 	 * @param data_inicio Formato: "00/00/0000"
 	 * @param tempo	Tempo dado em anos
@@ -20,7 +20,7 @@ public class Poupanca {
 				valor = novoValor;
 			}
 		} else {
-			if(taxa_selic < 8.5) {
+			if(taxa_selic < 0.085) {
 				double novoValor = 0;
 				for(int i = 0; i < tempo; i++) {
 					novoValor = valor + calculo_anual(valor, (taxa_selic * 0.7));
@@ -40,7 +40,7 @@ public class Poupanca {
 	
 	/**
 	 * 
-	 * Função auxiliar para ajudar no cálculo do rendimento
+	 * FunÃ§Ã£o auxiliar para ajudar no cÃ¡lculo do rendimento
 	 * 
 	 * @param valor
 	 * @param multiplicador
@@ -53,7 +53,7 @@ public class Poupanca {
 	
 	
 	/**
-	 * Checa se o início da aplicação começou antes da nova regra
+	 * Checa se o inÃ­cio da aplicaÃ§Ã£o comeÃ§ou antes da nova regra
 	 * 
 	 * @param data_checar
 	 * @return
